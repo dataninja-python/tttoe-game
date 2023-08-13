@@ -27,10 +27,10 @@ export class GameService {
   }
 
   createBoard() {
-    let board = [];
-    for (let i = 0; i < 9; i++) {
-      board.push({id:1, state: null});
-    };
+    let board: any[] = [];
+    for (let i: number = 0; i < 9; i++) {
+      board.push({ id: 1, state: null });
+    }
     return board;
   }
 
@@ -39,12 +39,12 @@ export class GameService {
   }
 
   set setBoard(board: any) {
-    this.board = [ ...board];
+    this.board = [...board];
   }
 
-  changePlayerTurn(squareClicked: any){
+  changePlayerTurn(squareClicked: any) :void {
     this.updateBoard(squareClicked);
-    if(!this.isGameOver) this.activePlayer = this.activePlayer === "X" ? "O" : "X"
+    if(!this.isGameOver) this.activePlayer = this.activePlayer === "X" ? "O" : "X";
     this.turnCount++;
     this.isGameOver = this.isGameOver ? true : false;
   }
@@ -63,13 +63,14 @@ export class GameService {
   }
 
   get isWinner(): boolean {
-    return this.checkDiag() || this.checkRows(this.board, "row") || this.checkRows(this.board, "col") ? true : false;
+    return this.checkDiag() || this.checkRows(this.board, "row") ||
+        this.checkRows(this.board, "col") ? true : false;
   }
 
   checkRows(board: any, mode: any) {
     const
       ROW = mode === "row",
-      DIST = ROW ? 1: 3,
+      DIST = ROW ? 1 : 3,
       INC = ROW ? 3 : 1,
       NUMTIMES = ROW ? 7 : 3;
 
