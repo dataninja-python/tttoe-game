@@ -1,0 +1,186 @@
+// https://css-tricks.com/reset-all-margins-padding/
+// http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+
+// transition constants
+$frame: 1;
+$ms-frame-rate: 17;
+$base-transition: 'ease';
+$base-transition-delay: calc($ms-frame-rate * $frame * 1) + 'ms';
+
+// constant for removing variance across browsers
+$const-margin: 0;
+$const-padding: 0;
+$const-margin-sides: auto;
+$const-box-sizing: border-box;
+$const-font-family: Arial, Helvetica, sans-serif;
+$const-font-size: 16px;
+
+// percentage constants
+$const-percent-1: 1%;
+$const-percent-3p: 3%;
+$const-percent-5p: 5%;
+$const-percent-10p: 10%;
+$const-percent-15p: 15%;
+$const-percent-20p: 20%;
+$const-percent-25p: 25%;
+$const-percent-30p: 30%;
+$const-percent-33p: 33%;
+$const-percent-35p: 35%;
+$const-percent-40p: 40%;
+$const-percent-45p: 45%;
+$const-percent-50p: 50%;
+$const-percent-55p: 55%;
+$const-percent-60p: 60%;
+$const-percent-625p: 62.5%;
+$const-percent-65p: 65%;
+$const-percent-67p: 67%;
+$const-percent-70p: 70%;
+$const-percent-75p: 75%;
+$const-percent-80p: 80%;
+$const-percent-85p: 85%;
+$const-percent-90p: 90%;
+$const-percent-95p: 95%;
+$const-percent-100p: 100%;
+$const-percent-105p: 105%;
+$const-percent-110p: 110%;
+$const-percent-115p: 115%;
+$const-percent-120p: 120%;
+$const-percent-125p: 125%;
+$const-percent-130p: 130%;
+$const-percent-135p: 135%;
+$const-percent-140p: 140%;
+$const-percent-145p: 145%;
+$const-percent-150p: 150%;
+$const-percent-155p: 155%;
+$const-percent-160p: 160%;
+$const-percent-165p: 165%;
+$const-percent-170p: 170%;
+$const-percent-175p: 175%;
+$const-percent-180p: 180%;
+$const-percent-185p: 185%;
+$const-percent-190p: 190%;
+$const-percent-195p: 195%;
+$const-percent-200p: 200%;
+$const-percent-300p: 300%;
+$const-percent-400p: 400%;
+$const-percent-500p: 500%;
+
+// multiplier constants
+$const-multiple-1: 1.00;
+$const-multiple-5p: 1.05; // 5%
+$const-multiple-10p: 1.10;
+$const-multiple-15p: 1.15;
+$const-multiple-20p: 1.20;
+$const-multiple-25p: 1.25;
+$const-multiple-30p: 1.30;
+$const-multiple-33p: 1.33;
+$const-multiple-35p: 1.35;
+$const-multiple-40p: 1.40;
+$const-multiple-45p: 1.45;
+$const-multiple-50p: 1.50;
+$const-multiple-55p: 1.55;
+$const-multiple-60p: 1.60;
+$const-multiple-65p: 1.65;
+$const-multiple-67p: 1.67;
+$const-multiple-70p: 1.70;
+$const-multiple-75p: 1.75;
+$const-multiple-80p: 1.80;
+$const-multiple-85p: 1.85;
+$const-multiple-90p: 1.90;
+$const-multiple-95p: 1.95; // 95%
+$const-multiple-100p: 2.00; // 100%
+$const-multiple-200p: 3.00; // 200%
+$const-multiple-300p: 4.00; // 300%
+$const-multiple-400p: 5.00; // 400%
+$const-multiple-500p: 6.00; // 500%
+$const-multiple-600p: 7.00; // 600%
+$const-multiple-700p: 8.00; // 700%
+$const-multiple-800p: 9.00; // 800%
+$const-multiple-900p: 10.00; // 900%
+$const-multiple-1000p: 11.00; // 1000%
+
+// breakpoint constants
+$const-break-320: 320px;    // Extra small devices (portrait phones)
+$const-break-480: 480px;    // Small devices (landscape phones)
+$const-break-540: 540px;
+$const-break-576: 576px;
+$const-break-640: 640px;
+$const-break-768: 768px;    // Medium devices (tablets)
+$const-break-769: 769px;
+$const-break-992: 992px;    // Large devices (small laptops, large tablets)
+$const-break-1024: 1024px;  // Extra large devices (laptops, desktops)
+$const-break-1200: 1200px;
+$const-break-1216: 1216px;
+$const-break-1280: 1280px;
+$const-break-1400: 1400px;
+$const-break-1408: 1408px;
+$const-break-1440: 1440px;  // XXL devices (large desktops)
+$const-break-1600: 1600px;
+$const-break-1680: 1680px;
+$const-break-1920: 1920px;
+$const-break-2048: 2048px;
+$const-break-2560: 2560px;
+$const-break-2880: 2880px;
+$const-break-3200: 3200px;
+$const-break-3840: 3840px;
+
+// orientation constants
+$const-orientation-portrait: portrait;
+$const-orientation-landscape: landscape;
+$const-orientation-portrait-txt: 'portrait';
+$const-orientation-landscape-txt: 'landscape';
+
+// transition constants
+$const-transition-time: 0.3s;
+$const-transition-animation: ease-in-out;
+
+// device names
+$const-sm-phone-txt: 'small-phone';
+$const-md-phone-txt: 'medium-phone';
+$const-lg-phone-txt: 'large-phone';
+$const-sm-tablet-txt: 'small-tablet';
+$const-md-tablet-txt: 'medium-tablet';
+$const-lg-tablet-txt: 'large-tablet';
+$const-sm-laptop-txt: 'small-laptop';
+$const-md-laptop-txt: 'medium-laptop';
+$const-lg-laptop-txt: 'large-laptop';
+$const-sm-desktop-txt: 'small-desktop';
+$const-md-desktop-txt: 'medium-desktop';
+$const-lg-desktop-txt: 'large-desktop';
+
+
+// translate to device
+$const-sm-phone-max: $const-break-320;
+$const-md-phone-max: $const-break-480;
+$const-lg-phone-max: $const-break-540;
+$const-sm-tablet-max: $const-break-640;
+$const-md-tablet-max: $const-break-768;
+$const-lg-tablet-max: $const-break-992;
+$const-sm-laptop-max: $const-break-1024;
+$const-md-laptop-max: $const-break-1280;
+$const-lg-laptop-max: $const-break-1400;
+$const-sm-desktop-max: $const-break-1600;
+$const-md-desktop-max: $const-break-1920;
+$const-lg-desktop-max: $const-break-2560;
+
+// define everything neatly
+$breakpoints: (
+  'sm-phone': $const-sm-phone-max,
+  'md-phone': $const-md-phone-max,
+  'lg-phone': $const-lg-phone-max,
+  'sm-tablet': $const-sm-tablet-max,
+  'md-tablet': $const-md-tablet-max,
+  'lg-tablet': $const-lg-tablet-max,
+  'sm-laptop': $const-sm-laptop-max,
+  'md-laptop': $const-md-laptop-max,
+  'lg-laptop': $const-lg-laptop-max,
+  'sm-desktop': $const-sm-desktop-max,
+  'md-desktop': $const-md-desktop-max,
+  'lg-desktop': $const-lg-desktop-max
+);
+
+$orientations: (
+  'portrait': $const-orientation-portrait,
+  'landscape': $const-orientation-landscape
+);
+
