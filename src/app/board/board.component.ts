@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GameService} from "../game.service";
 
 @Component({
   selector: 'app-board',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-  constructor() {}
+  constructor(public gameService: GameService) {  }
 
   ngOnInit(): void {
 

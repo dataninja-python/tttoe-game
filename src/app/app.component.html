@@ -3,6 +3,16 @@
     <h1 class="text-center text-6xl text-teal-400 font-extra-bold">
       Tic-<span class="text-6xl text-yellow-300">Tac</span>-Toe
     </h1>
+
+    <-!-- display the player name --->
+    <h1 class="text-center text-orange-600 text-4xl mt-10 font-bold">
+      {{gameService.activePlayer}}'S TURN
+    </h1>
+
+    <-!-- winner Text --->
+    <h1 class="text-center text-red-500 mt-10 text-4xl font-semibold" *ngIf="gameService.winner">
+      {{gameService.activePlayer}} WON
+    </h1>
   </div>
   <app-board></app-board>
 </div>

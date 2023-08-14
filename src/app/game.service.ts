@@ -29,7 +29,7 @@ export class GameService {
   createBoard() {
     let board: any[] = [];
     for (let i: number = 0; i < 9; i++) {
-      board.push({ id: 1, state: null });
+      board.push({ id: i, state: null });
     }
     return board;
   }
@@ -49,9 +49,9 @@ export class GameService {
     this.isGameOver = this.isGameOver ? true : false;
   }
 
-  updateBoard(squareClicked: any) {
+  updateBoard(squareClicked: any) :void {
     this.board[squareClicked.id].state = squareClicked.state;
-    if(this.winner) {
+    if(this.isWinner) {
       this.winner = true;
       this.isGameOver = false;
       this.isGameOver = true;
